@@ -1,0 +1,18 @@
+.container { max-width: 1200px; margin: 0 auto; }
+.subtitle { color: #666; font-size: 1.1rem; margin-bottom: 2rem; }
+.routing-explanation { background: #e6f3ff; border-left: 4px solid #3182ce; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
+.routing-explanation h3 { margin-top: 0; color: #2c5282; }
+.routing-explanation code { background: #2d3748; color: #fbbf24; padding: 0.2rem 0.5rem; border-radius: 3px; font-family: monospace; }
+.users-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.user-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.user-card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.user-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.user-header h3 { margin: 0; color: #2d3748; }
+.user-role { background: #667eea; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.85rem; }
+.user-email { color: #4a5568; margin: 0.5rem 0; }
+.user-bio { color: #718096; font-size: 0.95rem; line-height: 1.5; margin: 1rem 0; }
+.btn-view, .btn-nav { display: inline-block; margin-top: 1rem; margin-right: 0.5rem; padding: 0.6rem 1.2rem; background: #667eea; color: white; text-decoration: none; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem; }
+.btn-view:hover, .btn-nav:hover { background: #5568d3; transform: translateY(-2px); }
+.btn-nav { background: #48bb78; }
+.btn-nav:hover { background: #38a169; }
+.loading { text-align: center; padding: 3rem; color: #666; font-size: 1.2rem; }

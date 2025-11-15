@@ -1,0 +1,24 @@
+<div class="container">
+  <button (click)="goBack()" class="btn-back">← Back to Products</button>
+
+  <div class="detail-card">
+    <h1>📦 Product Details</h1>
+    <p class="product-id">Product ID: <code>{{ productId }}</code></p>
+    
+    <div class="routing-info">
+      <h3>🎯 Routing Concepts in This Feature:</h3>
+      <ul>
+        <li><strong>Lazy Loading:</strong> This module loaded on-demand</li>
+        <li><strong>Feature Routing:</strong> Separate routes file (products.routes.ts)</li>
+        <li><strong>Route Parameters:</strong> :productId extracted from URL</li>
+        <li><strong>Code Splitting:</strong> Reduced main bundle size</li>
+      </ul>
+    </div>
+
+    <div class="demo-content">
+      <h3>Product Information</h3>
+      <p>This would normally show detailed product information for ID: <strong>{{ productId }}</strong></p>
+      <p>In a real app, you would use a resolver or service to fetch this data.</p>
+    </div>
+  </div>
+</div>

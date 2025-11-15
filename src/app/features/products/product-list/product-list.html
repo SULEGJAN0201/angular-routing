@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>🛍️ Products Catalog</h1>
+  
+  <div class="lazy-loading-info">
+    <h3>⚡ Routing Concept: Lazy Loading in Action!</h3>
+    <p>This entire <strong>Products</strong> feature was loaded on-demand when you navigated here.</p>
+    <p>Check your browser's Network tab - you'll see a separate chunk file was downloaded.</p>
+    <p>Benefits: Faster initial load, smaller main bundle, better performance.</p>
+  </div>
+
+  <div class="products-grid">
+    @for (product of products; track product.id) {
+      <div class="product-card">
+        <div class="product-header">
+          <h3>{{ product.name }}</h3>
+          <span class="category-badge">{{ product.category }}</span>
+        </div>
+        <p class="price">${{ product.price }}</p>
+        <a [routerLink]="['/products', product.id]" class="btn">View Details →</a>
+      </div>
+    }
+  </div>
+</div>

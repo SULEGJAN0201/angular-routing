@@ -1,0 +1,27 @@
+.container { max-width: 800px; margin: 0 auto; }
+.btn-back { padding: 0.75rem 1.5rem; background: #4a5568; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; margin-bottom: 2rem; transition: all 0.3s; }
+.btn-back:hover { background: #2d3748; transform: translateX(-4px); }
+.resolver-info { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px; }
+.resolver-info h3 { margin-top: 0; color: #065f46; }
+.resolver-info code { background: #2d3748; color: #fbbf24; padding: 0.2rem 0.5rem; border-radius: 3px; font-family: monospace; }
+.user-detail-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.user-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; border-bottom: 2px solid #e2e8f0; margin-bottom: 2rem; }
+.user-header h1 { margin: 0; color: #2d3748; }
+.user-role { background: #667eea; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 1rem; }
+.user-info { display: grid; gap: 1rem; margin-bottom: 2rem; }
+.info-item { display: flex; justify-content: space-between; padding: 1rem; background: #f7fafc; border-radius: 6px; }
+.label { font-weight: 600; color: #4a5568; }
+.value { color: #2d3748; }
+.user-bio-section { margin: 2rem 0; padding: 1.5rem; background: #f7fafc; border-radius: 6px; }
+.user-bio-section h3 { margin-top: 0; color: #2d3748; }
+.user-bio-section p { line-height: 1.8; color: #4a5568; }
+.routing-details { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 4px; margin-top: 2rem; }
+.routing-details h3 { margin-top: 0; color: #92400e; }
+.routing-details ul { margin: 0; padding-left: 1.5rem; }
+.routing-details li { padding: 0.5rem 0; }
+.routing-details code { background: #2d3748; color: #fbbf24; padding: 0.2rem 0.5rem; border-radius: 3px; font-family: monospace; }
+.error-card { background: #fed7d7; border: 2px solid #fc8181; padding: 2rem; border-radius: 8px; text-align: center; }
+.error-card h2 { color: #c53030; margin-top: 0; }
+.error-card p { color: #742a2a; }
+.btn { display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #667eea; color: white; text-decoration: none; border-radius: 6px; transition: all 0.3s; }
+.btn:hover { background: #5568d3; }

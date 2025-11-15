@@ -1,0 +1,10 @@
+.container { max-width: 600px; margin: 0 auto; }
+.contact-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+h1 { color: #2d3748; }
+.contact-form { margin-top: 2rem; }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #2d3748; }
+.form-control { width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; }
+.form-control:focus { outline: none; border-color: #667eea; }
+.btn { width: 100%; padding: 0.75rem; background: #667eea; color: white; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.btn:hover { background: #5568d3; transform: translateY(-2px); }

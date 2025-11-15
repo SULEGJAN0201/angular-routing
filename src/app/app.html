@@ -1,0 +1,176 @@
+<!--
+  ═══════════════════════════════════════════════════════════════════════════
+  MAIN APP COMPONENT TEMPLATE
+  ═══════════════════════════════════════════════════════════════════════════
+
+  ROUTING CONCEPTS DEMONSTRATED:
+  1. RouterLink: Declarative navigation (routerLink directive)
+  2. RouterLinkActive: Highlight active routes
+  3. RouterOutlet: Placeholder for routed components
+  4. Programmatic Navigation: Via Router service (in component)
+
+  ═══════════════════════════════════════════════════════════════════════════
+-->
+
+<div class="app-container">
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <!-- NAVIGATION BAR -->
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <header class="navbar">
+    <div class="navbar-brand">
+      <h1>🧭 Angular Routing Guide</h1>
+      <p class="subtitle">From Beginner to Advanced</p>
+    </div>
+
+    <!--
+      ROUTING CONCEPT: RouterLink Directive
+
+      routerLink: Declarative way to navigate between routes
+      - Binds to a route path
+      - Generates proper href attributes
+      - Handles navigation on click
+      - Works with browser back/forward buttons
+
+      Syntax Options:
+      - routerLink="/home"           (string)
+      - [routerLink]="['/users', id]" (array with parameters)
+      - [routerLink]="'/about'"       (property binding)
+    -->
+    <nav class="nav-links">
+      <a routerLink="/home"
+         routerLinkActive="active"
+         class="nav-link">
+        Home
+      </a>
+
+      <a routerLink="/about"
+         routerLinkActive="active"
+         class="nav-link">
+        About
+      </a>
+
+      <a routerLink="/users"
+         routerLinkActive="active"
+         class="nav-link">
+        Users
+      </a>
+
+      <a routerLink="/products"
+         routerLinkActive="active"
+         class="nav-link">
+        Products
+      </a>
+
+      <a routerLink="/dashboard"
+         routerLinkActive="active"
+         class="nav-link">
+        Dashboard
+      </a>
+
+      <a routerLink="/contact"
+         routerLinkActive="active"
+         class="nav-link">
+        Contact
+      </a>
+    </nav>
+
+    <!--
+      ROUTING CONCEPT: Conditional Navigation Based on Auth State
+
+      Demonstrates:
+      - Showing/hiding links based on authentication
+      - Using signals for reactive UI updates
+      - Different navigation for logged in vs logged out users
+    -->
+    <div class="auth-section">
+      @if (authService.isAuthenticated()) {
+        <!-- Logged In User -->
+        <span class="user-info">
+          👤 {{ authService.currentUser() }}
+        </span>
+        <button (click)="logout()" class="btn btn-secondary">
+          Logout
+        </button>
+      } @else {
+        <!-- Not Logged In -->
+        <a routerLink="/login"
+           routerLinkActive="active"
+           class="btn btn-primary">
+          Login
+        </a>
+      }
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <!-- MAIN CONTENT AREA -->
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <main class="main-content">
+    <!--
+      ROUTING CONCEPT: Router Outlet
+
+      <router-outlet> is a placeholder directive that Angular fills with
+      the component for the currently active route.
+
+      HOW IT WORKS:
+      1. User navigates to a route (e.g., /home)
+      2. Router matches route configuration
+      3. Router instantiates the matched component
+      4. Component is rendered inside <router-outlet>
+
+      MULTIPLE OUTLETS:
+      You can have multiple named outlets:
+      <router-outlet name="sidebar"></router-outlet>
+
+      NESTED OUTLETS:
+      Child routes render in nested outlets within parent components
+
+      LIFECYCLE:
+      - Components are destroyed when navigating away
+      - New components are created when navigating to a route
+      - Use route reuse strategy for optimization
+    -->
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <!-- FOOTER - Routing Information Display -->
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="routing-info">
+      <h3>📚 Routing Concepts in This App</h3>
+      <div class="concepts-grid">
+        <div class="concept-card">
+          <h4>Beginner</h4>
+          <ul>
+            <li>✅ Basic Routes</li>
+            <li>✅ RouterLink</li>
+            <li>✅ RouterOutlet</li>
+            <li>✅ Route Parameters</li>
+            <li>✅ Redirects</li>
+          </ul>
+        </div>
+        <div class="concept-card">
+          <h4>Intermediate</h4>
+          <ul>
+            <li>✅ Child Routes</li>
+            <li>✅ Route Guards</li>
+            <li>✅ Query Parameters</li>
+            <li>✅ Route Data</li>
+            <li>✅ Wildcard Routes</li>
+          </ul>
+        </div>
+        <div class="concept-card">
+          <h4>Advanced</h4>
+          <ul>
+            <li>✅ Lazy Loading</li>
+            <li>✅ Route Resolvers</li>
+            <li>✅ NavigationExtras</li>
+            <li>✅ Programmatic Navigation</li>
+            <li>✅ Auth Guards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

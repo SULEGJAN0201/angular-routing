@@ -1,0 +1,7 @@
+.container { max-width: 800px; margin: 0 auto; }
+.content-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+h1 { color: #2d3748; }
+h2 { color: #4a5568; margin-top: 0; }
+h3 { color: #667eea; margin-top: 2rem; }
+p { line-height: 1.8; color: #4a5568; }
+ul { line-height: 2; color: #4a5568; }

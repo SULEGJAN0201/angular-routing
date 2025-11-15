@@ -1,0 +1,57 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>🔐 Login to Access Protected Routes</h2>
+
+    <!-- ROUTING CONCEPT: Display returnUrl information -->
+    @if (returnUrl !== '/home') {
+      <div class="info-box">
+        <p>⚠️ You need to log in to access: <strong>{{ returnUrl }}</strong></p>
+        <p class="small-text">This URL was stored by the AuthGuard</p>
+      </div>
+    }
+
+    <form (ngSubmit)="onSubmit()" class="login-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          required
+          placeholder="Enter any username"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+          placeholder="Enter any password"
+          class="form-control"
+        />
+      </div>
+
+      @if (errorMessage) {
+        <div class="error-message">{{ errorMessage }}</div>
+      }
+
+      <button type="submit" class="btn-submit">Login</button>
+    </form>
+
+    <div class="demo-note">
+      <h4>📝 Demo Notes:</h4>
+      <ul>
+        <li>This is a demo - any username/password works</li>
+        <li>Try accessing <code>/dashboard</code> without logging in</li>
+        <li>You'll be redirected here with the returnUrl</li>
+        <li>After login, you'll be sent to the protected page</li>
+      </ul>
+    </div>
+  </div>
+</div>

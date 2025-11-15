@@ -1,0 +1,19 @@
+.login-container { display: flex; justify-content: center; align-items: center; min-height: 60vh; }
+.login-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 450px; width: 100%; }
+.login-card h2 { margin-top: 0; color: #2d3748; text-align: center; }
+.info-box { background: #fef3cd; border: 1px solid #ffd700; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem; }
+.info-box p { margin: 0.5rem 0; }
+.small-text { font-size: 0.85rem; color: #666; }
+.login-form { margin-top: 1.5rem; }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #2d3748; }
+.form-control { width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; }
+.form-control:focus { outline: none; border-color: #667eea; }
+.error-message { background: #fed7d7; color: #c53030; padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem; }
+.btn-submit { width: 100%; padding: 0.75rem; background: #667eea; color: white; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.btn-submit:hover { background: #5568d3; transform: translateY(-2px); }
+.demo-note { margin-top: 2rem; padding: 1rem; background: #f7fafc; border-radius: 6px; }
+.demo-note h4 { margin-top: 0; color: #2d3748; }
+.demo-note ul { margin: 0; padding-left: 1.5rem; }
+.demo-note li { padding: 0.25rem 0; }
+.demo-note code { background: #e2e8f0; padding: 0.2rem 0.4rem; border-radius: 3px; font-family: monospace; }

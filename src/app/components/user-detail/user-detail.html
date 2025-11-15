@@ -1,0 +1,54 @@
+<div class="container">
+  <button (click)="goBack()" class="btn-back">← Back to Users</button>
+
+  <div class="resolver-info">
+    <h3>🔄 Routing Concept: Route Resolver in Action</h3>
+    <p>This data was pre-loaded by the <code>userResolver</code> before this component was activated.</p>
+    <p>No loading spinner needed - the data is guaranteed to be available on component init!</p>
+  </div>
+
+  @if (user) {
+    <div class="user-detail-card">
+      <div class="user-header">
+        <h1>{{ user.name }}</h1>
+        <span class="user-role">{{ user.role }}</span>
+      </div>
+
+      <div class="user-info">
+        <div class="info-item">
+          <span class="label">ID:</span>
+          <span class="value">{{ user.id }}</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Email:</span>
+          <span class="value">📧 {{ user.email }}</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Role:</span>
+          <span class="value">{{ user.role }}</span>
+        </div>
+      </div>
+
+      <div class="user-bio-section">
+        <h3>About</h3>
+        <p>{{ user.bio }}</p>
+      </div>
+
+      <div class="routing-details">
+        <h3>📍 Routing Details</h3>
+        <ul>
+          <li><strong>Route Parameter:</strong> <code>:id = {{ userId }}</code></li>
+          <li><strong>Resolver:</strong> <code>userResolver</code> pre-fetched this data</li>
+          <li><strong>Data Available:</strong> Immediately on component init (no loading state)</li>
+        </ul>
+      </div>
+    </div>
+  } @else {
+    <div class="error-card">
+      <h2>❌ User Not Found</h2>
+      <p>No user found with ID: {{ userId }}</p>
+      <p>The resolver returned undefined for this ID.</p>
+      <a routerLink="/users" class="btn">Back to Users List</a>
+    </div>
+  }
+</div>

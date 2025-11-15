@@ -1,0 +1,9 @@
+.child-component { }
+h2 { color: #2d3748; margin-top: 0; }
+.route-info { background: #fef3c7; padding: 1rem; border-radius: 6px; margin: 1rem 0; }
+.route-info code { background: #2d3748; color: #fbbf24; padding: 0.2rem 0.5rem; border-radius: 3px; font-family: monospace; }
+.settings-section { background: #f7fafc; padding: 2rem; border-radius: 8px; margin-top: 2rem; }
+.settings-section h3 { margin-top: 0; color: #2d3748; }
+.setting-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: white; margin: 1rem 0; border-radius: 6px; }
+.setting-item label { font-weight: 500; color: #4a5568; }
+.setting-item input, .setting-item select { padding: 0.5rem; border: 2px solid #e2e8f0; border-radius: 4px; }

@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>👥 Users List</h1>
+  <p class="subtitle">Click on any user to view details (demonstrates Route Parameters)</p>
+
+  <div class="routing-explanation">
+    <h3>📚 Routing Concept: Route Parameters</h3>
+    <p>When you click a user, the URL will change to <code>/users/:id</code></p>
+    <p>For example: <code>/users/1</code>, <code>/users/2</code>, etc.</p>
+    <p>The UserDetail component will read the <code>:id</code> parameter to display the correct user.</p>
+  </div>
+
+  <div class="users-grid">
+    @for (user of users; track user.id) {
+      <div class="user-card">
+        <div class="user-header">
+          <h3>{{ user.name }}</h3>
+          <span class="user-role">{{ user.role }}</span>
+        </div>
+        <p class="user-email">📧 {{ user.email }}</p>
+        <p class="user-bio">{{ user.bio }}</p>
+
+        <!-- 
+          ROUTING CONCEPT: RouterLink with Parameters
+          
+          Syntax: [routerLink]="['/path', param1, param2]"
+          Example: [routerLink]="['/users', user.id]"
+          
+          This generates: /users/1, /users/2, etc.
+        -->
+        <a [routerLink]="['/users', user.id]" class="btn-view">
+          View Details →
+        </a>
+
+        <!-- Alternative: Programmatic Navigation -->
+        <button (click)="viewUserDetails(user.id)" class="btn-nav">
+          Navigate Programmatically
+        </button>
+      </div>
+    } @empty {
+      <p class="loading">Loading users...</p>
+    }
+  </div>
+</div>

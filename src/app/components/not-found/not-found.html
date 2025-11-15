@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="error-card">
+    <h1 class="error-code">404</h1>
+    <h2>Page Not Found</h2>
+    <p>The page you're looking for doesn't exist.</p>
+    
+    <div class="routing-info">
+      <h3>🔍 Routing Concept: Wildcard Route</h3>
+      <p>This component is shown for all undefined routes using the wildcard path <code>**</code></p>
+      <p>In <code>app.routes.ts</code>, this route is configured as:</p>
+      <pre><code>{{ '{' }} path: '**', component: NotFoundComponent {{ '}' }}</code></pre>
+      <p>⚠️ The wildcard route must be the LAST route in the configuration!</p>
+    </div>
+    
+    <a routerLink="/home" class="btn">Go to Home Page</a>
+  </div>
+</div>

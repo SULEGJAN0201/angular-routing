@@ -1,0 +1,61 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>📊 Dashboard</h1>
+    <p class="subtitle">Protected Route with Nested Child Routes</p>
+  </div>
+
+  <div class="concept-explanation">
+    <h3>🔐 Routing Concepts Demonstrated:</h3>
+    <ul>
+      <li><strong>Route Guard:</strong> This page required authentication (authGuard)</li>
+      <li><strong>Child Routes:</strong> Overview, Stats, and Settings are child routes</li>
+      <li><strong>Nested Router Outlet:</strong> Child components render below</li>
+      <li><strong>Shared Layout:</strong> Navigation and header shared across child routes</li>
+    </ul>
+  </div>
+
+  <div class="dashboard-content">
+    <!-- Sidebar Navigation for Child Routes -->
+    <aside class="sidebar">
+      <h3>Navigation</h3>
+      <nav class="sidebar-nav">
+        <!--
+          ROUTING CONCEPT: Child Route Navigation
+          
+          These links navigate to child routes:
+          - /dashboard/overview
+          - /dashboard/stats
+          - /dashboard/settings
+        -->
+        <a routerLink="overview" routerLinkActive="active" class="nav-item">
+          📈 Overview
+        </a>
+        <a routerLink="stats" routerLinkActive="active" class="nav-item">
+          📊 Statistics
+        </a>
+        <a routerLink="settings" routerLinkActive="active" class="nav-item">
+          ⚙️ Settings
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-area">
+      <!--
+        ROUTING CONCEPT: Nested Router Outlet
+        
+        This <router-outlet> is DIFFERENT from the one in AppComponent
+        It renders the CHILD routes of /dashboard:
+        - DashboardOverviewComponent
+        - DashboardStatsComponent
+        - DashboardSettingsComponent
+        
+        HIERARCHY:
+        AppComponent <router-outlet>
+          └─ DashboardComponent <router-outlet>  ← You are here
+              └─ Child components render here
+      -->
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+.child-component { }
+h2 { color: #2d3748; margin-top: 0; }
+.route-info { background: #fef3c7; padding: 1rem; border-radius: 6px; margin: 1rem 0; }
+.route-info code { background: #2d3748; color: #fbbf24; padding: 0.2rem 0.5rem; border-radius: 3px; font-family: monospace; }
+.info-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.5rem; margin-top: 2rem; border-radius: 4px; }
+.info-box h3 { margin-top: 0; color: #065f46; }
+.info-box ul { margin: 0; padding-left: 1.5rem; }
+.info-box li { padding: 0.5rem 0; }
